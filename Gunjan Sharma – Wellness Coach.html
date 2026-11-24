@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gunjan Sharma – Senior Wellness Coach | Transform Your Body & Health</title>
+<meta name="description" content="Senior Wellness Coach Gunjan Sharma. Personalised nutrition, sustainable fat loss, muscle building, PCOS/Thyroid reversal & lifestyle coaching.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   DESIGN TOKENS & ROOT VARIABLES (Light & Dark Mode)
+   ========================================================================== */
+:root {
+  --bg-primary: #fcfaf6;
+  --bg-secondary: #f4eee2;
+  --bg-surface: #ffffff;
+  --bg-surface-glass: rgba(255, 255, 255, 0.92);
+  --bg-elevated: #ffffff;
+  
+  --ink-primary: #121c17;
+  --ink-secondary: #3e4f45;
+  --ink-muted: #6b7e74;
+  --ink-inverted: #fbf8f1;
+  
+  --brand-forest: #14382a;
+  --brand-forest-dark: #0a1f16;
+  --brand-forest-light: #1f4f3c;
+  --brand-gold: #c29543;
+  --brand-gold-light: #e5b758;
+  --brand-gold-glow: rgba(194, 149, 67, 0.32);
+  --brand-accent: #267353;
+  
+  --border-subtle: #e9e2d3;
+  --border-strong: #d7cbba;
+  
+  --hero-grad: linear-gradient(145deg, #0e271c 0%, #163d2e 60%, #0d2218 100%);
+  --gold-grad: linear-gradient(135deg, #d4a755 0%, #b8893a 50%, #996e27 100%);
+  --card-shadow: 0 10px 28px -4px rgba(20, 56, 42, 0.08), 0 4px 10px -2px rgba(20, 56, 42, 0.03);
+  --hover-shadow: 0 20px 42px -6px rgba(20, 56, 42, 0.16), 0 8px 24px -2px rgba(194, 149, 67, 0.28);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a130e;
+  --bg-secondary: #101c15;
+  --bg-surface: #14221b;
+  --bg-surface-glass: rgba(20, 34, 27, 0.92);
+  --bg-elevated: #1a2c23;
+  
+  --ink-primary: #f5f2ea;
+  --ink-secondary: #c9d6cd;
+  --ink-muted: #8e9f94;
+  --ink-inverted: #0a130e;
+  
+  --brand-forest: #1c4b38;
+  --brand-forest-dark: #08140f;
+  --brand-forest-light: #28694f;
+  --brand-gold: #deb05c;
+  --brand-gold-light: #f5cb76;
+  --brand-gold-glow: rgba(222, 176, 92, 0.35);
+  --brand-accent: #3fa378;
+  
+  --border-subtle: #22352b;
+  --border-strong: #334d40;
+  
+  --card-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.5);
+  --hover-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.7), 0 0 28px rgba(222, 176, 92, 0.25);
+}
+
+/* ==========================================================================
+   RESET & BASE TYPOGRAPHY
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--ink-primary);
+  line-height: 1.65;
+  font-size: 16px;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  padding-bottom: 70px; /* Space for mobile sticky footer */
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  color: var(--ink-secondary);
+  font-size: 1.02rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 4vw, 32px);
+  padding-right: clamp(16px, 4vw, 32px);
+}
+
+/* ==========================================================================
+   BADGES, TAGS & BUTTONS
+   ========================================================================== */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(194, 149, 67, 0.12);
+  border: 1px solid rgba(194, 149, 67, 0.35);
+  color: var(--brand-gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--gold-grad);
+  color: #0b1c13;
+  box-shadow: 0 8px 24px var(--brand-gold-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(194, 149, 67, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink-primary);
+  border: 1.5px solid var(--border-strong);
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-gold);
+  color: var(--brand-gold);
+  transform: translateY(-2px);
+}
+
+.btn-hero-outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7f1e4;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--brand-gold-light);
+  color: var(--brand-gold-light);
+  transform: translateY(-3px);
+}
+
+.btn-wa {
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+.btn-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand-gold);
+  box-shadow: 0 0 12px var(--brand-gold-glow);
+}
+
+.brand-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1.1;
+}
+
+.brand-title span {
+  color: var(--brand-gold);
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-muted);
+  display: block;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--brand-gold);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--brand-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--ink-primary);
+  transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--brand-gold);
+  transform: rotate(20deg);
+}
+
+.mobile-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--ink-primary);
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 99;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border-subtle);
+  color: var(--ink-primary);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  background: var(--hero-grad);
+  color: #f6efe2;
+  position: relative;
+  overflow: hidden;
+  padding: clamp(50px, 7vw, 100px) 0 clamp(60px, 8vw, 110px);
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(222, 176, 92, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulseOrb 8s infinite alternate ease-in-out;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(38, 115, 83, 0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes pulseOrb {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-20px, 30px); }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+  line-height: 1.08;
+  margin: 16px 0 20px;
+  color: #ffffff;
+}
+
+.hero-content h1 em {
+  font-style: italic;
+  color: var(--brand-gold-light);
+  position: relative;
+}
+
+.hero-content p {
+  color: rgba(246, 239, 226, 0.88);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-stat-card b {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: var(--brand-gold-light);
+  line-height: 1;
+}
+
+.hero-stat-card span {
+  font-size: 0.82rem;
+  color: rgba(246, 239, 226, 0.75);
+  font-weight: 500;
+}
+
+/* Hero Portrait with Uniform Fixed Size Frame */
+.hero-visual-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  border-radius: 220px 220px 28px 28px;
+  padding: 6px;
+  background: linear-gradient(180deg, var(--brand-gold-light) 0%, rgba(222, 176, 92, 0.25) 60%, rgba(38, 115, 83, 0.45) 100%);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 35px var(--brand-gold-glow);
+  animation: floatSoft 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatSoft {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+.hero-portrait-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 214px 214px 22px 22px;
+  overflow: hidden;
+  position: relative;
+  background: #0f2b20;
+}
+
+.hero-portrait-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-portrait-frame:hover .hero-portrait-inner img {
+  transform: scale(1.05);
+}
+
+/* Floating Badges */
+.floating-pill {
+  position: absolute;
+  background: rgba(14, 39, 28, 0.9);
+  border: 1px solid rgba(222, 176, 92, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.floating-pill-left {
+  bottom: 30px;
+  left: -15px;
+}
+
+.floating-pill-right {
+  top: 50px;
+  right: -15px;
+}
+
+.pill-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gold-grad);
+  color: #0d2218;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   SECTIONS GENERAL
+   ========================================================================== */
+section {
+  padding: clamp(60px, 7vw, 100px) 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(36px, 5vw, 60px);
+}
+
+.section-header .badge-pill {
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  color: var(--ink-primary);
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   DISCLAIMER BANNER (Prominently requested by user)
+   ========================================================================== */
+.disclaimer-banner {
+  background: linear-gradient(135deg, rgba(194, 149, 67, 0.12) 0%, rgba(194, 149, 67, 0.04) 100%);
+  border: 1.5px solid rgba(194, 149, 67, 0.45);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto 34px;
+  max-width: 980px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(194, 149, 67, 0.08);
+}
+
+.disclaimer-icon-badge {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--gold-grad);
+  color: #0b1c13;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(194, 149, 67, 0.3);
+}
+
+.disclaimer-text {
+  font-size: 0.93rem;
+  color: var(--ink-secondary);
+  line-height: 1.5;
+}
+
+.disclaimer-text strong {
+  color: var(--brand-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   PHOTO ANIMATIONS & STANDARDIZED PHOTO CARDS
+   ========================================================================== */
+.photo-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+}
+
+.photo-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--hover-shadow);
+  border-color: var(--brand-gold);
+}
+
+/* Shine overlay effect on hover */
+.photo-card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 55%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: transform 0.8s ease;
+}
+
+.photo-card:hover::after {
+  transform: translateY(100%) rotate(25deg);
+}
+
+.photo-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(14, 39, 28, 0.85);
+  border: 1px solid rgba(222, 176, 92, 0.4);
+  backdrop-filter: blur(8px);
+  color: #f7f1e4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.zoom-hint-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.3s ease;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+}
+
+.photo-card:hover .zoom-hint-icon,
+.rev-item:hover .zoom-hint-icon,
+.ceo-card:hover .zoom-hint-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   CEO & LEADERSHIP GALLERY (Standardized Size & Height)
+   ========================================================================== */
+.ceo-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.ceo-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.ceo-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--brand-gold);
+  box-shadow: var(--hover-shadow);
+}
+
+/* FIXED UNIFORM SIZE FOR ALL CEO PHOTOS */
+.ceo-card-media {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  background: #0f1c16;
+}
+
+.ceo-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ceo-card:hover .ceo-card-media img {
+  transform: scale(1.08);
+}
+
+.ceo-card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ceo-card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.ceo-card-body h3 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  color: var(--ink-primary);
+}
+
+.ceo-card-body p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   REVIEWS & TRANSFORMATIONS (Fixed Uniform Photo Sizing on All 19 Photos)
+   ========================================================================== */
+.rev-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.rev-filter-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--ink-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.rev-filter-btn:hover, .rev-filter-btn.active {
+  background: var(--brand-forest);
+  color: #ffffff;
+  border-color: var(--brand-forest);
+}
+
+[data-theme="dark"] .rev-filter-btn:hover,
+[data-theme="dark"] .rev-filter-btn.active {
+  background: var(--brand-gold);
+  color: #0b1a13;
+  border-color: var(--brand-gold);
+}
+
+.rev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rev-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.rev-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+  border-color: var(--brand-gold);
+}
+
+/* STANDARDIZED UNIFORM HEIGHT & OBJECT-FIT FOR ALL REVIEW PHOTOS */
+.rev-item-img-container {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  background: #11221a;
+  position: relative;
+}
+
+.rev-item-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rev-item:hover .rev-item-img-container img {
+  transform: scale(1.07);
+}
+
+/* Subtle gradient at the bottom of the image for contrast */
+.rev-item-img-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
+.rev-caption-bar {
+  padding: 14px 18px;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+}
+
+.rev-client-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-primary);
+}
+
+.rev-stars {
+  color: #f59e0b;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   INTERACTIVE ACCORDIONS SECTION
+   ========================================================================== */
+.accordion-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.accordion-item:hover {
+  border-color: var(--border-strong);
+}
+
+.accordion-item.active {
+  border-color: var(--brand-gold);
+  box-shadow: 0 8px 24px rgba(194, 149, 67, 0.12);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 20px 26px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  gap: 16px;
+  transition: color 0.25s ease;
+}
+
+.accordion-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.accordion-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(194, 149, 67, 0.12);
+  color: var(--brand-gold);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.accordion-item.active .accordion-icon-box {
+  background: var(--gold-grad);
+  color: #0d2218;
+}
+
+.accordion-chevron {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+  color: var(--ink-muted);
+}
+
+.accordion-item.active .accordion-chevron {
+  transform: rotate(180deg);
+  color: var(--brand-gold);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 26px 0 78px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 400px;
+  padding: 0 26px 24px 78px;
+}
+
+.accordion-content p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--ink-secondary);
+}
+
+.accordion-list {
+  list-style: none;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+}
+
+.accordion-list li::before {
+  content: '✓';
+  color: var(--brand-accent);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   HEALTH TOOLS & INTERACTIVE CALCULATORS
+   ========================================================================== */
+.tools-section {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tools-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tools-tab-btn {
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--ink-primary);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  font-size: 0.92rem;
+}
+
+.tools-tab-btn:hover {
+  border-color: var(--brand-gold);
+}
+
+.tools-tab-btn.active {
+  background: var(--brand-forest);
+  color: #ffffff;
+  border-color: var(--brand-forest);
+  box-shadow: 0 6px 20px rgba(20, 56, 42, 0.25);
+}
+
+[data-theme="dark"] .tools-tab-btn.active {
+  background: var(--brand-gold);
+  color: #0a130e;
+  border-color: var(--brand-gold);
+}
+
+.tool-panel {
+  display: none;
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: clamp(22px, 4vw, 34px);
+  box-shadow: var(--card-shadow);
+  animation: fadeIn 0.4s ease;
+}
+
+.tool-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--ink-primary);
+  font-family: inherit;
+  font-size: 0.98rem;
+  transition: border-color 0.25s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+}
+
+.tool-result-box {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  border: 1.5px dashed var(--brand-gold);
+  text-align: center;
+  min-height: 80px;
+}
+
+.tool-result-box .val {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-gold);
+  line-height: 1;
+}
+
+/* Breathing Orb */
+.breathing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 0;
+}
+
+.breathing-orb {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--brand-gold-light) 0%, var(--brand-forest) 80%);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 0 50px var(--brand-gold-glow);
+  transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   POPUP MODAL (3-Second Trigger Lead Capture Form -> Redirect to WhatsApp)
+   ========================================================================== */
+.popup-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.popup-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 14, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--brand-gold);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 5vw, 36px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4), 0 0 40px var(--brand-gold-glow);
+  z-index: 2;
+  transform: scale(0.9) translateY(20px);
+  animation: popIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--ink-secondary);
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.popup-close-btn:hover {
+  background: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+  transform: rotate(90deg);
+}
+
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-header h3 {
+  font-size: 1.7rem;
+  margin: 10px 0 6px;
+  color: var(--ink-primary);
+}
+
+.popup-header p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.popup-field {
+  margin-bottom: 14px;
+}
+
+.popup-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  margin-bottom: 5px;
+}
+
+.popup-field input, .popup-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--ink-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease;
+}
+
+.popup-field input:focus, .popup-field select:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+}
+
+.popup-disclaimer {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  margin-top: 12px;
+}
+
+/* ==========================================================================
+   LIGHTBOX MODAL (Full Resolution View for Photos)
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 18, 13, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img-wrap {
+  position: relative;
+  max-height: 72vh;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(222, 176, 92, 0.35);
+  background: #000;
+}
+
+.lightbox-img-wrap img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lightbox-close:hover {
+  background: var(--brand-gold);
+  color: #0b1a13;
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 5;
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--brand-gold);
+  color: #0b1a13;
+}
+
+.lightbox-prev {
+  left: -65px;
+}
+
+.lightbox-next {
+  right: -65px;
+}
+
+.lightbox-footer {
+  margin-top: 14px;
+  text-align: center;
+  color: #f7f1e4;
+  font-size: 0.9rem;
+}
+
+.lightbox-footer .counter {
+  font-weight: 700;
+  color: var(--brand-gold-light);
+  margin-bottom: 3px;
+}
+
+.lightbox-footer .disclaimer-tag {
+  font-size: 0.78rem;
+  opacity: 0.85;
+  color: #e5b758;
+}
+
+/* ==========================================================================
+   CONTACT & CTA SECTION
+   ========================================================================== */
+.contact-section {
+  background: var(--hero-grad);
+  color: #f6efe2;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(65px, 8vw, 110px) 0;
+}
+
+.contact-section h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.contact-section p {
+  color: rgba(246, 239, 226, 0.85);
+  max-width: 620px;
+  margin: 0 auto 34px;
+  font-size: 1.1rem;
+}
+
+.contact-channels {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.contact-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  padding: 13px 22px;
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  transition: var(--transition);
+}
+
+.contact-badge-card:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--brand-gold-light);
+  transform: translateY(-3px);
+  color: var(--brand-gold-light);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer.site-footer {
+  background: #08140f;
+  color: #8fa096;
+  padding: 55px 0 32px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+.footer-brand h4 {
+  font-size: 1.5rem;
+  color: #f5f2ea;
+  margin-bottom: 10px;
+}
+
+.footer-links h5 {
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-gold-light);
+  margin-bottom: 14px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   MOBILE STICKY BOTTOM BAR (Optimized for Phones)
+   ========================================================================== */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  z-index: 95;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-bottom-bar-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mobile-bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+
+/* Floating WhatsApp Quick Action Button for Desktop */
+.floating-wa-btn {
+  position: fixed;
+  right: clamp(16px, 3vw, 28px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+  z-index: 90;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+  transition: var(--transition);
+  animation: pulseWa 3s infinite;
+}
+
+@keyframes pulseWa {
+  0%, 100% { transform: scale(1); box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45); }
+  50% { transform: scale(1.04); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.7); }
+}
+
+.floating-wa-btn:hover {
+  transform: translateY(-3px) scale(1.06);
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Mobile & Tablet Optimization)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btn-group {
+    justify-content: center;
+  }
+  .hero-stats-row {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .ceo-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .nav-actions .btn, .floating-wa-btn {
+    display: none;
+  }
+  .mobile-hamburger, .mobile-bottom-bar {
+    display: block;
+  }
+  .ceo-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .ceo-card-media {
+    height: 260px;
+  }
+  .rev-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .rev-item-img-container {
+    height: 280px;
+  }
+  .hero-portrait-frame {
+    max-width: 320px;
+    height: 400px;
+  }
+  .accordion-trigger {
+    padding: 16px 18px;
+    font-size: 1.02rem;
+  }
+  .accordion-content {
+    padding: 0 18px 0 18px;
+  }
+  .accordion-item.active .accordion-content {
+    padding: 0 18px 20px 18px;
+  }
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+  .lightbox-prev {
+    left: 10px;
+  }
+  .lightbox-next {
+    right: 10px;
+  }
+  .floating-pill-left, .floating-pill-right {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==========================================================================
+     HEADER NAVIGATION
+     ========================================================================== -->
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="#top" class="brand-logo">
+      <img src="ceo/WhatsApp%20Image%202026-11-24%20at%202.32.48%20PM.jpeg" alt="Gunjan Sharma" class="brand-avatar">
+      <div>
+        <div class="brand-title">Gunjan Sharma<span>.</span></div>
+        <span class="brand-subtitle">Senior Wellness Coach</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#about" class="nav-link">About Coach</a></li>
+      <li><a href="#leadership" class="nav-link">Leadership</a></li>
+      <li><a href="#programs" class="nav-link">Coaching Plans</a></li>
+      <li><a href="#transformations" class="nav-link">Real Results (19)</a></li>
+      <li><a href="#tools" class="nav-link">Health Calculators</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <svg id="themeIcon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      </button>
+      <button onclick="openPopup()" class="btn btn-primary">
+        <span>Book Consultation</span>
+      </button>
+      <button class="mobile-hamburger" id="hamburgerBtn" aria-label="Open Navigation Menu">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#about" class="mobile-link">About Coach</a>
+  <a href="#leadership" class="mobile-link">Leadership & Vision</a>
+  <a href="#programs" class="mobile-link">Coaching Programs</a>
+  <a href="#transformations" class="mobile-link">Transformations & Reviews (19)</a>
+  <a href="#tools" class="mobile-link">Free Health Tools</a>
+  <a href="#faq" class="mobile-link">FAQ & Questions</a>
+  <a href="#contact" class="mobile-link">Contact & WhatsApp</a>
+  <button onclick="openPopup(); mobileDrawer.classList.remove('open');" class="btn btn-primary" style="margin-top:10px;width:100%">
+    🎁 Get Free Diet Consultation
+  </button>
+</div>
+
+<!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+<section class="hero-section" id="top">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container hero-grid">
+    <div class="hero-content reveal">
+      <div class="badge-pill">⭐ Senior Wellness &amp; Executive Health Coach</div>
+      <h1>Transform Your Body. <em>Reclaim</em> Your Energy.</h1>
+      <p>
+        Namaste, I am <strong>Gunjan Sharma</strong>. Personalised nutrition, sustainable fat loss, hormonal balance &amp; lifestyle coaching jo sach mein aapke busy routine me fit baithti hai. No crash diets, no starving — strictly sustainable, science-backed transformations.
+      </p>
+      <div class="hero-btn-group">
+        <button onclick="openPopup()" class="btn btn-primary">
+          <span>Book Free Consultation</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="#transformations" class="btn btn-hero-outline">
+          <span>View 19+ Transformations</span>
+        </a>
+        <a href="#tools" class="btn btn-hero-outline">
+          <span>Free Health Tools</span>
+        </a>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hero-stat-card">
+          <b>500+</b>
+          <span>Lives Transformed</span>
+        </div>
+        <div class="hero-stat-card">
+          <b>10+</b>
+          <span>Years Experience</span>
+        </div>
+        <div class="hero-stat-card">
+          <b>98%</b>
+          <span>Client Retention</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual-wrapper reveal">
+      <div class="hero-portrait-frame">
+        <div class="hero-portrait-inner">
+          <img src="ceo/WhatsApp%20Image%202026-11-24%20at%202.32.48%20PM.jpeg" alt="Gunjan Sharma Senior Wellness Coach Portrait">
+        </div>
+      </div>
+      <div class="floating-pill floating-pill-left">
+        <div class="pill-icon">✓</div>
+        <div>
+          <div>100% Sustainable</div>
+          <small style="opacity:0.8;font-size:0.7rem">Indian Food Friendly</small>
+        </div>
+      </div>
+      <div class="floating-pill floating-pill-right">
+        <div class="pill-icon">★</div>
+        <div>
+          <div>Top Rated Coach</div>
+          <small style="opacity:0.8;font-size:0.7rem">Personal 1-on-1 Mentorship</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     ABOUT COACH & METHODOLOGY
+     ========================================================================== -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">The Philosophy</div>
+      <h2>Health That Fits Your Real Life</h2>
+      <p>Weight loss, muscle toning, thyroid and PCOS reversal, energy elevation — a comprehensive 360° approach tailored to your lifestyle.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+      <div class="photo-card reveal" style="padding:28px;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🥗</div>
+        <h3 style="font-size:1.5rem;margin-bottom:8px;">Zero Starvation Diet</h3>
+        <p style="font-size:0.92rem;color:var(--ink-muted);">Indian-kitchen friendly meals. Enjoy roti, sabzi, dal, and home cooked dishes without expensive shakes or exotic superfoods.</p>
+      </div>
+
+      <div class="photo-card reveal" style="padding:28px;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">⚡</div>
+        <h3 style="font-size:1.5rem;margin-bottom:8px;">Metabolic Calibration</h3>
+        <p style="font-size:0.92rem;color:var(--ink-muted);">Fix slow metabolism, sluggish thyroid, insulin spikes, and hormonal imbalances for long-term health and vitality.</p>
+      </div>
+
+      <div class="photo-card reveal" style="padding:28px;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🏋️</div>
+        <h3 style="font-size:1.5rem;margin-bottom:8px;">Home &amp; Gym Fitness</h3>
+        <p style="font-size:0.92rem;color:var(--ink-muted);">Flexible workout routines designed specifically for your fitness level, joint health, and daily schedule availability.</p>
+      </div>
+
+      <div class="photo-card reveal" style="padding:28px;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">📲</div>
+        <h3 style="font-size:1.5rem;margin-bottom:8px;">Daily WhatsApp Check-ins</h3>
+        <p style="font-size:0.92rem;color:var(--ink-muted);">Consistent accountability, meal feedback, motivation, and adjustments so you never feel alone on your journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     LEADERSHIP & CEO BRANDING SHOWCASE (Standardized Photo Sizes)
+     ========================================================================== -->
+<section id="leadership" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">Executive Leadership</div>
+      <h2>The Coach Behind The Movement</h2>
+      <p>Recognized for excellence, dedication, and transforming executive and family lifestyles across borders.</p>
+    </div>
+
+    <div class="ceo-showcase-grid">
+      <!-- CEO Photo 1 -->
+      <div class="ceo-card reveal" onclick="openLightboxFromSrc('ceo/Business%20Excellence%20Award%20Ceremony.png', 'Business Excellence Award Ceremony - Honored for impact in Health & Wellness leadership')">
+        <div class="ceo-card-media">
+          <span class="photo-badge">🏆 Award Winner</span>
+          <img src="ceo/Business%20Excellence%20Award%20Ceremony.png" alt="Gunjan Sharma Business Excellence Award Ceremony" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="ceo-card-body">
+          <div class="ceo-card-tag">Recognition</div>
+          <h3>Business Excellence Award</h3>
+          <p>Honored on international stages for pioneering sustainable, healthy lifestyle methodologies.</p>
+        </div>
+      </div>
+
+      <!-- CEO Photo 2 -->
+      <div class="ceo-card reveal" onclick="openLightboxFromSrc('ceo/Confident%20CEO%20in%20a%20Modern%20Office.png', 'Executive Health Strategy - Custom wellness coaching for corporate leaders and founders')">
+        <div class="ceo-card-media">
+          <span class="photo-badge">💼 Executive Coaching</span>
+          <img src="ceo/Confident%20CEO%20in%20a%20Modern%20Office.png" alt="Gunjan Sharma Confident CEO in Modern Office" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="ceo-card-body">
+          <div class="ceo-card-tag">Executive Wellness</div>
+          <h3>Modern Office Strategy</h3>
+          <p>High-stress management and nutrition tailored specifically for busy executives, entrepreneurs, and professionals.</p>
+        </div>
+      </div>
+
+      <!-- CEO Photo 3 -->
+      <div class="ceo-card reveal" onclick="openLightboxFromSrc('ceo/Dubai%20Golden%20Hour%20by%20the%20Burj%20Khalifa.png', 'Dubai Golden Hour by Burj Khalifa - Global clientele and world-class wellness standards')">
+        <div class="ceo-card-media">
+          <span class="photo-badge">🌍 Global Reach</span>
+          <img src="ceo/Dubai%20Golden%20Hour%20by%20the%20Burj%20Khalifa.png" alt="Gunjan Sharma Dubai Golden Hour by the Burj Khalifa" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="ceo-card-body">
+          <div class="ceo-card-tag">Global Presence</div>
+          <h3>Dubai &amp; Global Coaching</h3>
+          <p>Mentoring high-achievers worldwide across Dubai, UK, USA, and India with world-class wellness benchmarks.</p>
+        </div>
+      </div>
+
+      <!-- CEO Photo 4 -->
+      <div class="ceo-card reveal" onclick="openLightboxFromSrc('ceo/Warm%20Corporate%20Portrait%20at%20the%20Desk.png', 'Warm Corporate Portrait at the Desk - Dedicated 1-on-1 personalized mentorship')">
+        <div class="ceo-card-media">
+          <span class="photo-badge">🤝 1-on-1 Mentorship</span>
+          <img src="ceo/Warm%20Corporate%20Portrait%20at%20the%20Desk.png" alt="Gunjan Sharma Warm Corporate Portrait at the Desk" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="ceo-card-body">
+          <div class="ceo-card-tag">Mentorship</div>
+          <h3>Dedicated Consultation</h3>
+          <p>Every client gets personal attention, customized roadmap analysis, and empathetic, lifelong habit coaching.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     TRANSFORMATIONS & CLIENT REVIEWS (All 19 Photos Uniform Sized + Disclaimer)
+     ========================================================================== -->
+<section id="transformations">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">Proof Of Excellence</div>
+      <h2>Real Transformations &amp; Client Stories</h2>
+      <p>Witness genuine body transformations, verified WhatsApp client feedback, and real-life lifestyle turnarounds.</p>
+    </div>
+
+    <!-- MANDATORY USER DISCLAIMER AS REQUESTED -->
+    <div class="disclaimer-banner reveal">
+      <div class="disclaimer-icon-badge">⚠️</div>
+      <div class="disclaimer-text">
+        <strong>Important Coaching Disclaimer</strong>
+        These results are typical, may vary person to person. Every individual body responds uniquely based on personal consistency, metabolism, hormonal profile, starting physical condition, and adherence to the personalized nutrition and workout plan.
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="rev-controls reveal">
+      <button class="rev-filter-btn active" data-filter="all">All Photos (19)</button>
+      <button class="rev-filter-btn" data-filter="before-after">Transformations</button>
+      <button class="rev-filter-btn" data-filter="feedback">WhatsApp Reviews</button>
+    </div>
+
+    <!-- Responsive Grid for All 19 Photos with Uniform Sizing -->
+    <div class="rev-grid" id="revGrid">
+      <!-- Photo 1 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(0)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🔥 Transformation #1</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.29%20PM.jpeg" alt="Client Transformation 1" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Client Success Story #1</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(1)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💪 Visible Fat Loss #2</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.31%20PM%20(1).jpeg" alt="Client Transformation 2" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Body Toning Journey #2</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="rev-item reveal" data-category="feedback" onclick="openLightbox(2)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💬 Client Feedback #3</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.31%20PM%20(2).jpeg" alt="Client Transformation 3" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">WhatsApp Check-in Proof #3</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(3)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">✨ Inch Loss #4</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.31%20PM.jpeg" alt="Client Transformation 4" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Sustainable Results #4</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(4)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🔥 Core &amp; Posture #5</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.32%20PM%20(1).jpeg" alt="Client Transformation 5" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Strength &amp; Shape #5</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="rev-item reveal" data-category="feedback" onclick="openLightbox(5)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💬 Chat Review #6</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.32%20PM.jpeg" alt="Client Transformation 6" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Verified WhatsApp Proof #6</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(6)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🌟 Energy &amp; Health #7</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.33%20PM%20(1).jpeg" alt="Client Transformation 7" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Lifestyle Transformation #7</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 8 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(7)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🥗 Nutrition Shift #8</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.33%20PM%20(2).jpeg" alt="Client Transformation 8" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Targeted Fat Loss #8</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 9 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(8)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">⚡ Milestone #9</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.33%20PM.jpeg" alt="Client Transformation 9" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Body Transformation #9</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 10 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(9)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🎯 Goal Achieved #10</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.30.34%20PM.jpeg" alt="Client Transformation 10" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Weight Loss Victory #10</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 11 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(10)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💪 Muscle &amp; Definition #11</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.23%20PM.jpeg" alt="Client Transformation 11" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Toned Physique #11</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 12 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(11)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🌿 100% Natural #12</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.24%20PM%20(1).jpeg" alt="Client Transformation 12" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Healthy Metabolism #12</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 13 -->
+      <div class="rev-item reveal" data-category="feedback" onclick="openLightbox(12)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💬 Chat Review #13</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.24%20PM.jpeg" alt="Client Transformation 13" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">WhatsApp Feedback #13</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 14 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(13)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🔥 Incredible Progress #14</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.25%20PM%20(1).jpeg" alt="Client Transformation 14" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Total Body Shift #14</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 15 -->
+      <div class="rev-item reveal" data-category="feedback" onclick="openLightbox(14)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💬 Client Appreciation #15</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.25%20PM%20(2).jpeg" alt="Client Transformation 15" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Heartfelt Review #15</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 16 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(15)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🩺 PCOS &amp; Hormones #16</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.25%20PM.jpeg" alt="Client Transformation 16" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Hormonal Balance #16</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 17 -->
+      <div class="rev-item reveal" data-category="feedback" onclick="openLightbox(16)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">💬 Weight Scale Proof #17</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.26%20PM%20(1).jpeg" alt="Client Transformation 17" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Scale Milestone #17</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 18 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(17)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">⭐ Inspiring Journey #18</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.26%20PM%20(2).jpeg" alt="Client Transformation 18" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Dedicated Client #18</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Photo 19 -->
+      <div class="rev-item reveal" data-category="before-after" onclick="openLightbox(18)">
+        <div class="rev-item-img-container">
+          <span class="photo-badge">🏆 Peak Health #19</span>
+          <img src="rev/WhatsApp%20Image%202026-11-24%20at%202.31.26%20PM.jpeg" alt="Client Transformation 19" loading="lazy">
+          <div class="zoom-hint-icon">🔍</div>
+        </div>
+        <div class="rev-caption-bar">
+          <div class="rev-client-name">Grand Finale Result #19</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     INTERACTIVE ACCORDIONS SECTION (Coaching Programs Roadmap)
+     ========================================================================== -->
+<section id="programs" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">Coaching Architecture</div>
+      <h2>How Your Transformation Unfolds</h2>
+      <p>Click each phase below to explore how Gunjan personalizes your 90-day health evolution.</p>
+    </div>
+
+    <div class="accordion-wrapper reveal">
+      <!-- Accordion 1 -->
+      <div class="accordion-item active">
+        <button class="accordion-trigger" aria-expanded="true">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">🥗</div>
+            <span>Phase 1: Personalized Nutrition &amp; Kitchen Reset</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Hum aapke current eating habits, family cooking style aur schedule ko analyze karte hain. No boiled veggies or rigid starvation. Aapko milta hai flexible Indian meal blueprint with balanced macros and delicious variety.
+          </p>
+          <ul class="accordion-list">
+            <li>Tailored calorie and macronutrient distribution for your metabolic type</li>
+            <li>Guilt-free social dining and weekend restaurant management guidelines</li>
+            <li>Smart pantry replacements without expensive imported supplements</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accordion 2 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">⚡</div>
+            <span>Phase 2: Metabolic Activation &amp; Movement Blueprint</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Chahe aap beginner ho ya workout enthusiast, aapka exercise schedule aapke joint health, stamina aur daily free time ke mutabiq customize hota hai.
+          </p>
+          <ul class="accordion-list">
+            <li>Home or gym workout progression plans (20 to 45 mins)</li>
+            <li>Mobility and posture correction to eliminate desk-job stiffness</li>
+            <li>Daily NEAT (Non-Exercise Activity Thermogenesis) step targets</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accordion 3 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">🩺</div>
+            <span>Phase 3: Hormonal Balance, PCOS &amp; Thyroid Support</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Weight gain aksar hormonal stress ya cortisol imbalance ka outcome hota hai. We address the root cause — insulin resistance, erratic sleep cycles, bloating and gut inflammation.
+          </p>
+          <ul class="accordion-list">
+            <li>Anti-inflammatory food pairing principles</li>
+            <li>Sleep optimization protocols for deeper REM and growth hormone release</li>
+            <li>Stress mitigation techniques for steady blood sugar control</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Accordion 4 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">📲</div>
+            <span>Phase 4: 24/7 Daily WhatsApp Accountability</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Diet plans fails because of lack of guidance during real-life cravings and sudden events. Gunjan is by your side daily on WhatsApp for instant feedback and unwavering support.
+          </p>
+          <ul class="accordion-list">
+            <li>Daily meal photo reviews and instant portion guidance</li>
+            <li>Weekly body metric, inch loss, and energy tracking calls</li>
+            <li>Mindset resets so you never quit or rebound back</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     HEALTH TOOLS & INTERACTIVE CALCULATORS
+     ========================================================================== -->
+<section id="tools" class="tools-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">Free Interactive Calculators</div>
+      <h2>Know Your Health Numbers</h2>
+      <p>Instant science-backed body calculators to jumpstart your fitness awareness today.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tools-nav reveal">
+      <button class="tools-tab-btn active" data-tool="bmiTab">
+        <span>⚖️ BMI Calculator</span>
+      </button>
+      <button class="tools-tab-btn" data-tool="calTab">
+        <span>🔥 Daily Calories</span>
+      </button>
+      <button class="tools-tab-btn" data-tool="waterTab">
+        <span>💧 Water Intake</span>
+      </button>
+      <button class="tools-tab-btn" data-tool="breatheTab">
+        <span>🧘 Guided Breathing</span>
+      </button>
+    </div>
+
+    <!-- BMI Calculator -->
+    <div class="tool-panel active" id="bmiTab">
+      <h3 style="font-size:1.5rem;margin-bottom:14px;text-align:center;">Body Mass Index (BMI)</h3>
+      <div class="tool-grid">
+        <div class="form-group">
+          <label for="bmiWeight">Weight (kg)</label>
+          <input type="number" id="bmiWeight" class="form-control" placeholder="e.g. 72" value="70">
+        </div>
+        <div class="form-group">
+          <label for="bmiHeight">Height (cm)</label>
+          <input type="number" id="bmiHeight" class="form-control" placeholder="e.g. 168" value="165">
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%" onclick="calcBMI()">Calculate My BMI</button>
+      <div class="tool-result-box" id="bmiOutput">
+        <div class="val">25.7</div>
+        <div style="font-weight:600;margin-top:4px;">Overweight Range</div>
+        <small style="color:var(--ink-muted);">Target healthy weight: 50.4 – 67.8 kg</small>
+      </div>
+    </div>
+
+    <!-- Calorie Calculator -->
+    <div class="tool-panel" id="calTab">
+      <h3 style="font-size:1.5rem;margin-bottom:14px;text-align:center;">Daily Caloric Requirement (TDEE)</h3>
+      <div class="tool-grid">
+        <div class="form-group">
+          <label for="calAge">Age (Years)</label>
+          <input type="number" id="calAge" class="form-control" placeholder="32" value="30">
+        </div>
+        <div class="form-group">
+          <label for="calGender">Biological Gender</label>
+          <select id="calGender" class="form-control">
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+          </select>
+        </div>
+      </div>
+      <div class="tool-grid">
+        <div class="form-group">
+          <label for="calWeight">Weight (kg)</label>
+          <input type="number" id="calWeight" class="form-control" placeholder="70" value="70">
+        </div>
+        <div class="form-group">
+          <label for="calHeight">Height (cm)</label>
+          <input type="number" id="calHeight" class="form-control" placeholder="165" value="165">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="calActivity">Weekly Activity Level</label>
+        <select id="calActivity" class="form-control">
+          <option value="1.2">Sedentary (Desk job, minimal exercise)</option>
+          <option value="1.375">Lightly Active (1–3 light workouts/week)</option>
+          <option value="1.55" selected>Moderately Active (3–5 days active workout)</option>
+          <option value="1.725">Very Active (6–7 heavy workouts/week)</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" style="width:100%" onclick="calcCalories()">Calculate Calorie Targets</button>
+      <div class="tool-result-box" id="calOutput">
+        <div class="val">2,185 kcal</div>
+        <div style="font-weight:700;margin-top:4px;">Estimated Daily Maintenance Calories</div>
+        <div style="margin-top:6px;font-size:0.92rem;color:var(--ink-secondary);">
+          🔥 <strong>Fat Loss Target:</strong> ~1,735 kcal/day &nbsp;|&nbsp; 
+          💪 <strong>Lean Muscle Gain:</strong> ~2,535 kcal/day
+        </div>
+        <small style="color:var(--ink-muted);display:block;margin-top:4px;">Basal Metabolic Rate (BMR): 1,410 kcal</small>
+      </div>
+    </div>
+
+    <!-- Water Calculator -->
+    <div class="tool-panel" id="waterTab">
+      <h3 style="font-size:1.5rem;margin-bottom:14px;text-align:center;">Daily Hydration Target</h3>
+      <div class="tool-grid">
+        <div class="form-group">
+          <label for="waterWeight">Body Weight (kg)</label>
+          <input type="number" id="waterWeight" class="form-control" placeholder="70" value="68">
+        </div>
+        <div class="form-group">
+          <label for="waterWorkout">Daily Workout (Minutes)</label>
+          <input type="number" id="waterWorkout" class="form-control" placeholder="45" value="40">
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%" onclick="calcWater()">Calculate Water Requirement</button>
+      <div class="tool-result-box" id="waterOutput">
+        <div class="val">2.8 Litres</div>
+        <div style="font-weight:700;margin-top:4px;">Recommended Daily Water</div>
+        <small style="color:var(--ink-muted);">Approximately 11–12 glasses of clean water (250ml each)</small>
+      </div>
+    </div>
+
+    <!-- Guided Breathing Orb -->
+    <div class="tool-panel" id="breatheTab">
+      <h3 style="font-size:1.5rem;margin-bottom:6px;text-align:center;">4-7-8 Cortisol Calm Breathing</h3>
+      <p style="font-size:0.85rem;color:var(--ink-muted);text-align:center;margin-bottom:18px;">
+        Lowers heart rate and calms nervous system stress hormones instantly.
+      </p>
+      <div class="breathing-container">
+        <div class="breathing-orb" id="breathingOrb">Ready</div>
+      </div>
+      <button class="btn btn-primary" style="width:100%" id="breatheToggleBtn" onclick="toggleBreathing()">Start 1-Minute Guided Breath</button>
+      <div class="tool-result-box" id="breatheOutput" style="margin-top:16px;">
+        <div style="font-weight:600;">Inhale Deeply (4s) → Hold (4s) → Exhale Slowly (4s)</div>
+        <small style="color:var(--ink-muted);">Follow the expanding orb to regulate nervous system</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+     ========================================================================== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge-pill">Common Questions</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know before starting your coaching journey with Gunjan.</p>
+    </div>
+
+    <div class="accordion-wrapper reveal">
+      <!-- FAQ 1 -->
+      <div class="accordion-item active">
+        <button class="accordion-trigger" aria-expanded="true">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">❓</div>
+            <span>Kya mujhe apna regular ghar ka khana chhodna padega?</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Bilkul nahi! Gunjan's coaching philosophy believes in sustainable lifestyle eating. Aap apna regular dal, roti, sabzi, rice, paneer, and eggs enjoy karenge. Hum bas portion control, protein pacing aur cooking method ko calibrate karte hain taaki aapka fat loss effortless ho sake.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">❓</div>
+            <span>Gym jana mandatory hai ya ghar par bhi workouts ho sakte hain?</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Gym jana zaruri nahi hai. Nearly 70% of our successful clients achieve exceptional transformations with home bodyweight training, resistance bands, and brisk walking. If you already go to a gym, Gunjan creates a progressive hypertrophy and strength plan for you.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">❓</div>
+            <span>Mujhe PCOS ya Thyroid issue hai. Kya mera weight loss ho payega?</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Haan, 100%! Gunjan specializes in hormonal optimization. PCOS aur Hypothyroidism me metabolic rate slow ho jata hai, jise hum low-glycemic nutrition, anti-inflammatory micronutrients aur sleep alignment ke zariye balance karte hain. Hundreds of women have reversed bloating and stubborn fat under her care.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">❓</div>
+            <span>Kitne din me noticeable results dekhne ko milenge?</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Pehle 10 se 14 dino me aapko energy levels me boost, bloating me massive reduction, aur light feeling mehsus hogi. 30 dino ke andar visible inch loss aur body composition changes aane lagte hain. (Note: Results are typical, may vary person to person based on adherence).
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <div class="accordion-trigger-left">
+            <div class="accordion-icon-box">❓</div>
+            <span>How do I get started with Gunjan Sharma?</span>
+          </div>
+          <div class="accordion-chevron">▼</div>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Simply click the button below to book your consultation or message at <strong>+91 9837675877</strong>. Gunjan will evaluate your current lifestyle, medical history, target weight, and recommend the best personalized coaching roadmap for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CALL TO ACTION & CONTACT
+     ========================================================================== -->
+<section id="contact" class="contact-section">
+  <div class="container reveal">
+    <div class="badge-pill" style="background:rgba(222, 176, 92, 0.18);border-color:rgba(222, 176, 92, 0.4);color:var(--brand-gold-light);margin-bottom:16px;">
+      Start Today
+    </div>
+    <h2>Ready For Your Life-Changing Transformation?</h2>
+    <p>
+      Stop guessing with random diets. Take the first step with senior certified guidance, personalized nutrition, and 24/7 accountability.
+    </p>
+
+    <div class="contact-channels">
+      <button onclick="openPopup()" class="btn btn-wa" style="font-size:1.05rem;">
+        <span>💬 WhatsApp +91 9837675877</span>
+      </button>
+      <a href="mailto:jeetgunjan7@gmail.com" class="contact-badge-card">
+        <span>✉️ jeetgunjan7@gmail.com</span>
+      </a>
+      <a href="https://www.instagram.com/gunjansharma4321" target="_blank" rel="noopener" class="contact-badge-card">
+        <span>📷 @gunjansharma4321</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Gunjan Sharma<span style="color:var(--brand-gold);">.</span></h4>
+        <p style="color:#a7b8ae;max-width:380px;font-size:0.9rem;margin-bottom:16px;">
+          Senior Wellness Coach committed to sustainable nutrition, natural fat loss, lifestyle habituation, and lifelong metabolic health.
+        </p>
+        <div style="font-size:0.82rem;color:var(--brand-gold-light);">
+          📍 Global Coaching Online · Based in India &amp; UAE
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About Gunjan</a></li>
+          <li><a href="#leadership">Leadership &amp; Awards</a></li>
+          <li><a href="#transformations">All 19 Transformations</a></li>
+          <li><a href="#tools">Health Tools &amp; BMI</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Direct Connect</h5>
+        <ul>
+          <li><a href="https://wa.me/919837675877">WhatsApp: +91 9837675877</a></li>
+          <li><a href="mailto:jeetgunjan7@gmail.com">Email: jeetgunjan7@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/gunjansharma4321" target="_blank" rel="noopener">Instagram: @gunjansharma4321</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p style="margin-bottom:8px;">
+        © 2026 Gunjan Sharma – Senior Wellness Coach. All Rights Reserved.
+      </p>
+      <p style="color:#788b81;font-size:0.76rem;max-width:850px;margin:0 auto;">
+        <strong>Health Disclaimer:</strong> These results are typical, may vary person to person. Content and interactive calculators on this website are for educational and motivational purposes only and do not substitute professional medical advice, diagnosis, or clinical treatment.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     MOBILE STICKY BOTTOM BAR (Optimized for Phones)
+     ========================================================================== -->
+<div class="mobile-bottom-bar">
+  <div class="mobile-bottom-bar-inner">
+    <button class="mobile-bottom-btn" style="background:var(--bg-secondary);color:var(--ink-primary);border:1px solid var(--border-subtle);" onclick="openPopup()">
+      <span>📋 Get Plan</span>
+    </button>
+    <a href="https://wa.me/919837675877?text=Hi%20Gunjan,%20I%20want%20to%20know%20more%20about%20your%20coaching%20plans!" class="mobile-bottom-btn" style="background:#25d366;color:#ffffff;" target="_blank" rel="noopener">
+      <span>💬 WhatsApp</span>
+    </a>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     FLOATING ACTION BUTTON (Desktop WhatsApp Quick Connect)
+     ========================================================================== -->
+<a href="https://wa.me/919837675877?text=Hi%20Gunjan,%20I%20want%20to%20know%20more%20about%20your%20coaching%20plans!" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span>💬 Chat with Coach</span>
+</a>
+
+<!-- ==========================================================================
+     LEAD POPUP MODAL (Appears after 3 seconds with close button & WhatsApp redirect)
+     ========================================================================== -->
+<div class="popup-modal" id="leadPopupModal" role="dialog" aria-modal="true" aria-label="Free Consultation Popup">
+  <div class="popup-backdrop" onclick="closePopup()"></div>
+  <div class="popup-box">
+    <button class="popup-close-btn" onclick="closePopup()" aria-label="Close Popup">✕</button>
+    
+    <div class="popup-header">
+      <span class="badge-pill">🔥 Free 1-on-1 Consultation</span>
+      <h3>Claim Free Diet Assessment</h3>
+      <p>Apni details bharein aur Coach Gunjan se WhatsApp par customized roadmap payein:</p>
+    </div>
+
+    <form id="leadPopupForm" onsubmit="handleLeadSubmit(event)">
+      <div class="popup-field">
+        <label for="popName">Aapka Naam / Name *</label>
+        <input type="text" id="popName" required placeholder="e.g. Priya Sharma">
+      </div>
+
+      <div class="popup-field">
+        <label for="popPhone">WhatsApp Number *</label>
+        <input type="tel" id="popPhone" required placeholder="e.g. 9876543210">
+      </div>
+
+      <div class="popup-field">
+        <label for="popGoal">Primary Fitness Goal *</label>
+        <select id="popGoal">
+          <option value="Fat Loss & Weight Loss" selected>🔥 Fat Loss &amp; Weight Loss</option>
+          <option value="PCOS / Thyroid Support">🩺 PCOS / Thyroid Hormonal Support</option>
+          <option value="Muscle Tone & Stamina">💪 Muscle Tone &amp; Strength</option>
+          <option value="Post-Pregnancy Weight Loss">🤱 Post-Pregnancy Transformation</option>
+          <option value="Healthy Lifestyle & Eating">🌿 Healthy Lifestyle &amp; Nutrition</option>
+        </select>
+      </div>
+
+      <div class="popup-field">
+        <label for="popWeight">Current &amp; Target Weight (Optional)</label>
+        <input type="text" id="popWeight" placeholder="e.g. Current: 74kg, Target: 60kg">
+      </div>
+
+      <button type="submit" class="btn btn-wa" style="width:100%;margin-top:10px;font-size:1.02rem;">
+        <span>💬 Get Custom Diet Plan on WhatsApp</span>
+      </button>
+
+      <div class="popup-disclaimer">
+        🔒 100% Privacy Guaranteed. Direct chat with Coach Gunjan Sharma.
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     FULL-SCREEN LIGHTBOX MODAL (With Disclaimer & Keyboard Navigation)
+     ========================================================================== -->
+<div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Photo Preview">
+  <div class="lightbox-container">
+    <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close modal">✕</button>
+    <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Previous photo">❮</button>
+    <button class="lightbox-nav-btn lightbox-next" id="lightboxNextBtn" aria-label="Next photo">❯</button>
+
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="Transformation Full Preview">
+    </div>
+
+    <div class="lightbox-footer">
+      <div class="counter" id="lightboxCounter">Photo 1 of 19</div>
+      <div id="lightboxTitle" style="font-weight:600;margin-bottom:3px;">Client Transformation</div>
+      <div class="disclaimer-tag">⚠️ Disclaimer: These results are typical, may vary person to person.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     JAVASCRIPT LOGIC
+     ========================================================================== -->
+<script>
+// --- Gallery Data (All 19 Photos from rev/) ---
+const GALLERY_ITEMS = [
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.29 PM.jpeg", title: "Client Transformation Story #1", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.31 PM (1).jpeg", title: "Visible Fat Loss & Shape #2", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.31 PM (2).jpeg", title: "WhatsApp Client Check-in Proof #3", cat: "feedback" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.31 PM.jpeg", title: "Sustainable Body Recomposition #4", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.32 PM (1).jpeg", title: "Posture & Strength Toning #5", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.32 PM.jpeg", title: "Verified WhatsApp Chat Proof #6", cat: "feedback" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.33 PM (1).jpeg", title: "Metabolic Health Revival #7", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.33 PM (2).jpeg", title: "Targeted Fat Loss Milestone #8", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.33 PM.jpeg", title: "Client Transformation Journey #9", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.30.34 PM.jpeg", title: "Weight Loss Victory #10", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.23 PM.jpeg", title: "Lean Muscle Toning #11", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.24 PM (1).jpeg", title: "Natural Nutrition Progress #12", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.24 PM.jpeg", title: "WhatsApp Chat Review #13", cat: "feedback" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.25 PM (1).jpeg", title: "Total Body Transformation #14", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.25 PM (2).jpeg", title: "Heartfelt Client Appreciation #15", cat: "feedback" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.25 PM.jpeg", title: "PCOS & Hormonal Healing #16", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.26 PM (1).jpeg", title: "Scale Progress Milestone #17", cat: "feedback" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.26 PM (2).jpeg", title: "Consistent Adherence Result #18", cat: "before-after" },
+  { src: "rev/WhatsApp Image 2026-11-24 at 2.31.26 PM.jpeg", title: "Peak Health & Confidence #19", cat: "before-after" }
+];
+
+let currentLightboxIndex = 0;
+let customModalMode = false;
+
+// --- Open Lightbox ---
+function openLightbox(index) {
+  customModalMode = false;
+  currentLightboxIndex = index;
+  updateLightbox();
+  const modal = document.getElementById('lightboxModal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openLightboxFromSrc(src, title) {
+  customModalMode = true;
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxTitle').textContent = title;
+  document.getElementById('lightboxCounter').textContent = "Executive Gallery";
+  document.getElementById('lightboxPrevBtn').style.display = 'none';
+  document.getElementById('lightboxNextBtn').style.display = 'none';
+  document.getElementById('lightboxModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightbox() {
+  document.getElementById('lightboxPrevBtn').style.display = 'grid';
+  document.getElementById('lightboxNextBtn').style.display = 'grid';
+  const item = GALLERY_ITEMS[currentLightboxIndex];
+  document.getElementById('lightboxImg').src = encodeURI(item.src);
+  document.getElementById('lightboxTitle').textContent = item.title;
+  document.getElementById('lightboxCounter').textContent = `Result ${currentLightboxIndex + 1} of ${GALLERY_ITEMS.length}`;
+}
+
+function closeLightbox() {
+  document.getElementById('lightboxModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function prevLightbox() {
+  if (customModalMode) return;
+  currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+  updateLightbox();
+}
+
+function nextLightbox() {
+  if (customModalMode) return;
+  currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
+  updateLightbox();
+}
+
+// Lightbox listeners
+document.getElementById('lightboxCloseBtn').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrevBtn').addEventListener('click', prevLightbox);
+document.getElementById('lightboxNextBtn').addEventListener('click', nextLightbox);
+
+document.getElementById('lightboxModal').addEventListener('click', (e) => {
+  if (e.target.id === 'lightboxModal') closeLightbox();
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closePopup();
+  }
+  if (!document.getElementById('lightboxModal').classList.contains('active')) return;
+  if (e.key === 'ArrowLeft') prevLightbox();
+  if (e.key === 'ArrowRight') nextLightbox();
+});
+
+// --- Lead Popup Modal (3-Second Auto Trigger) ---
+function openPopup() {
+  const popup = document.getElementById('leadPopupModal');
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePopup() {
+  const popup = document.getElementById('leadPopupModal');
+  popup.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// 3-second auto timer for popup
+setTimeout(() => {
+  if (!sessionStorage.getItem('gunjan_popup_dismissed')) {
+    openPopup();
+  }
+}, 3000);
+
+// Form submit -> Redirect to WhatsApp
+function handleLeadSubmit(event) {
+  event.preventDefault();
+  const name = document.getElementById('popName').value.trim();
+  const phone = document.getElementById('popPhone').value.trim();
+  const goal = document.getElementById('popGoal').value;
+  const weight = document.getElementById('popWeight').value.trim() || 'Not specified';
+
+  // Construct structured WhatsApp message
+  const text = `Namaste Gunjan Mam! I want to start my wellness transformation.%0A%0A👤 *Name:* ${encodeURIComponent(name)}%0A📱 *WhatsApp:* ${encodeURIComponent(phone)}%0A🎯 *Primary Goal:* ${encodeURIComponent(goal)}%0A⚖️ *Weight Details:* ${encodeURIComponent(weight)}%0A%0APlease share my personalized transformation diet and roadmap!`;
+
+  sessionStorage.setItem('gunjan_popup_dismissed', 'true');
+  closePopup();
+
+  // Redirect to WhatsApp
+  window.open(`https://wa.me/919837675877?text=${text}`, '_blank');
+}
+
+// --- Category Filtering for Transformations ---
+const filterBtns = document.querySelectorAll('.rev-filter-btn');
+const revItems = document.querySelectorAll('.rev-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    revItems.forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+
+// --- Accordions ---
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.accordion-item');
+    const isOpen = item.classList.contains('active');
+    
+    const parentWrapper = item.closest('.accordion-wrapper');
+    parentWrapper.querySelectorAll('.accordion-item').forEach(i => {
+      i.classList.remove('active');
+      const trig = i.querySelector('.accordion-trigger');
+      if (trig) trig.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// --- Theme Toggle (Light / Dark Mode) ---
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const htmlEl = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme_gunjan') || 'light';
+htmlEl.setAttribute('data-theme', savedTheme);
+
+themeToggleBtn.addEventListener('click', () => {
+  const current = htmlEl.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  htmlEl.setAttribute('data-theme', next);
+  localStorage.setItem('theme_gunjan', next);
+});
+
+// --- Mobile Hamburger Menu ---
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+hamburgerBtn.addEventListener('click', () => {
+  mobileDrawer.classList.toggle('open');
+});
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileDrawer.classList.remove('open');
+  });
+});
+
+// --- Health Tools Tab Switching ---
+const toolTabs = document.querySelectorAll('.tools-tab-btn');
+const toolPanels = document.querySelectorAll('.tool-panel');
+
+toolTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    toolTabs.forEach(t => t.classList.remove('active'));
+    toolPanels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const target = document.getElementById(tab.dataset.tool);
+    if (target) target.classList.add('active');
+  });
+});
+
+// --- BMI Calculation ---
+function calcBMI() {
+  const w = parseFloat(document.getElementById('bmiWeight').value);
+  const h = parseFloat(document.getElementById('bmiHeight').value) / 100;
+  if (!w || !h || h <= 0) return;
+  const bmi = (w / (h * h)).toFixed(1);
+  let status = "Healthy Weight Range";
+  let col = "var(--brand-accent)";
+  if (bmi < 18.5) { status = "Underweight"; col = "#eab308"; }
+  else if (bmi >= 25 && bmi < 29.9) { status = "Overweight Range"; col = "#f97316"; }
+  else if (bmi >= 30) { status = "Obese Range"; col = "#ef4444"; }
+
+  const minKg = (18.5 * h * h).toFixed(1);
+  const maxKg = (24.9 * h * h).toFixed(1);
+
+  document.getElementById('bmiOutput').innerHTML = `
+    <div class="val" style="color:${col};">${bmi}</div>
+    <div style="font-weight:700;margin-top:4px;color:${col}">${status}</div>
+    <small style="color:var(--ink-muted);">Ideal healthy weight range for your height: ${minKg} – ${maxKg} kg</small>
+  `;
+}
+
+// --- Calories Calculation (Mifflin-St Jeor TDEE) ---
+function calcCalories() {
+  const age = parseFloat(document.getElementById('calAge').value);
+  const gender = document.getElementById('calGender').value;
+  const w = parseFloat(document.getElementById('calWeight').value);
+  const h = parseFloat(document.getElementById('calHeight').value);
+  const act = parseFloat(document.getElementById('calActivity').value);
+
+  if (!age || !w || !h) return;
+  const bmr = (10 * w) + (6.25 * h) - (5 * age) + (gender === 'm' ? 5 : -161);
+  const tdee = Math.round(bmr * act);
+  const fatLoss = Math.round(tdee - 450);
+  const gain = Math.round(tdee + 350);
+
+  document.getElementById('calOutput').innerHTML = `
+    <div class="val">${tdee.toLocaleString()} kcal</div>
+    <div style="font-weight:700;margin-top:4px;">Estimated Daily Maintenance Calories</div>
+    <div style="margin-top:6px;font-size:0.92rem;color:var(--ink-secondary);">
+      🔥 <strong>Fat Loss Target:</strong> ~${fatLoss.toLocaleString()} kcal/day &nbsp;|&nbsp; 
+      💪 <strong>Lean Muscle Gain:</strong> ~${gain.toLocaleString()} kcal/day
+    </div>
+    <small style="color:var(--ink-muted);display:block;margin-top:4px;">Basal Metabolic Rate (BMR): ${Math.round(bmr)} kcal</small>
+  `;
+}
+
+// --- Water Intake Calculation ---
+function calcWater() {
+  const w = parseFloat(document.getElementById('waterWeight').value);
+  const m = parseFloat(document.getElementById('waterWorkout').value) || 0;
+  if (!w) return;
+  const liters = (w * 0.033 + (m / 30) * 0.35).toFixed(1);
+  const glasses = Math.round((liters * 1000) / 250);
+
+  document.getElementById('waterOutput').innerHTML = `
+    <div class="val">${liters} Litres</div>
+    <div style="font-weight:700;margin-top:4px;">Recommended Daily Water</div>
+    <small style="color:var(--ink-muted);">Approximately ${glasses} glasses (250 ml each) for optimal metabolic hydration</small>
+  `;
+}
+
+// --- Guided Breathing Timer (4-7-8 Cortisol Calm) ---
+let breathInterval = null;
+let isBreathingActive = false;
+
+function toggleBreathing() {
+  const orb = document.getElementById('breathingOrb');
+  const btn = document.getElementById('breatheToggleBtn');
+  const out = document.getElementById('breatheOutput');
+
+  if (isBreathingActive) {
+    clearInterval(breathInterval);
+    isBreathingActive = false;
+    orb.style.transform = 'scale(1)';
+    orb.textContent = 'Ready';
+    btn.textContent = 'Start 1-Minute Guided Breath';
+    out.innerHTML = `<div style="font-weight:600;">Inhale Deeply (4s) → Hold (4s) → Exhale Slowly (4s)</div><small style="color:var(--ink-muted);">Follow the expanding orb to regulate nervous system</small>`;
+    return;
+  }
+
+  isBreathingActive = true;
+  btn.textContent = 'Stop Breathing Exercise';
+  let phase = 0;
+  let cycle = 0;
+
+  function runCycle() {
+    if (!isBreathingActive) return;
+    if (phase === 0) {
+      orb.style.transform = 'scale(1.4)';
+      orb.textContent = 'Inhale';
+      out.innerHTML = `<div style="font-weight:700;color:var(--brand-gold);">Breathe in deeply through your nose (4s)...</div>`;
+      phase = 1;
+      setTimeout(runCycle, 4000);
+    } else if (phase === 1) {
+      orb.style.transform = 'scale(1.4)';
+      orb.textContent = 'Hold';
+      out.innerHTML = `<div style="font-weight:700;color:var(--brand-accent);">Hold breath, relax shoulders (4s)...</div>`;
+      phase = 2;
+      setTimeout(runCycle, 4000);
+    } else {
+      orb.style.transform = 'scale(1)';
+      orb.textContent = 'Exhale';
+      out.innerHTML = `<div style="font-weight:700;color:var(--ink-muted);">Exhale slowly through your mouth (4s)...</div>`;
+      phase = 0;
+      cycle++;
+      if (cycle >= 5) {
+        setTimeout(() => {
+          orb.style.transform = 'scale(1)';
+          orb.textContent = 'Calm 🌿';
+          out.innerHTML = `<div style="font-weight:700;color:var(--brand-gold);">Session Complete! You're grounded & focused.</div>`;
+          btn.textContent = 'Start Again';
+          isBreathingActive = false;
+        }, 4000);
+      } else {
+        setTimeout(runCycle, 4000);
+      }
+    }
+  }
+
+  runCycle();
+}
+
+// --- Scroll Reveal with IntersectionObserver ---
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      obs.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -30px 0px'
+});
+
+revealElements.forEach(el => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
